@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/question_add.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<nav id="navbar" class="">
+    <div class="nav-wrapper">
+      <!-- Navbar Logo -->
+      <div class="logo">
+        <!-- Logo Placeholder for Inlustration -->
+        <a href="/"><i class="fa fa-angellist"></i>Quola</a>
+      </div>
+  
+      <!-- Navbar Links -->
+      <ul id="menu">
+        <li><a href="">Questions</a></li><!--
+     --><li><a href="">Add Question</a></li>
+     <li><a href="">Generate Paper</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <table class="rwd-table" style="margin-top: 14%;">
+	<form id="add_form" method="post" action="/generate">
+        <tr>
+			<th>Topic</th>
+			<th>
+				<input type="text" list="tag-list" value="" name="tag" required>
+			</th>
+		</tr>
+        <tr>
+			<th>Number of easy questions</th>
+			<th>
+				<input type="number" name="easy" required>
+			</th>
+		</tr>
+		<tr>
+			<th>Number of medium questions</th>
+			<th>
+				<input type="number" name="medium" required>
+			</th>
+		</tr>
+		<tr>
+			<th>Number of hard questions</th>
+			<th>
+				<input type="number" name="hard" required>
+			</th>
+		</tr>
+	</form>
+  </table>
+  <button type="submit" class="btn" style="margin-left:43%;margin-top: 2%;" form="add_form">Calculate</button>
+  <datalist id="city-list">
+	<option value="easy"></option>
+	<option value="medium"></option>
+	<option value="hard"></option>
+  </datalist>
+  <datalist id="tag-list">
+	<% for(var i=0;i<mylist.length;i++){%>
+	  <option value="<%=mylist[i].tag%>"></option>
+	  <%}%>
+  </datalist>

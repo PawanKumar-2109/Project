@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/question_detail.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+      <!-- Logo Placeholder for Inlustration -->
+      <a href="/"><i class="fa fa-angellist"></i> Quola</a>
+    </div>
+
+    <!-- Navbar Links -->
+    <ul id="menu">
+      <li><a href="/question">Questions</a></li>
+      <li><a href="/add">Add Question</a></li><!--
+   --><li><a href="/generate">Generate Paper</a></li>
+    </ul>
+  </div>
+</nav>
+
+<table class="rwd-table" style="margin-top: 15%;margin-bottom: auto;">
+    <tr>
+        <th>ID</th>
+        <td><%=detail.id%></td>
+    </tr>
+    <tr>
+        <th>Description</th>
+        <td><%=detail.description%></td>
+    </tr>
+    <tr>
+        <th>Answer</th>
+        <td><%=detail.answer%></td>
+    </tr>
+    <tr>
+        <th>Level</th>
+        <td><%=detail.level%></td>
+    </tr>
+    <tr>
+        <th>Tag</th>
+        <td><%=detail.tag%></td>
+    </tr>
+</table>

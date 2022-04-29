@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="/css/question.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+      <!-- Logo Placeholder for Inlustration -->
+      <a href="/"><i class="fa fa-angellist"></i> Quola</a>
+    </div>
+
+    <!-- Navbar Links -->
+    <ul id="menu">
+      <li><a href="/question">Questions</a></li>
+      <li><a href="/add">Add Question</a></li><!--
+   --><li><a href="/">Generate Paper</a></li>
+    </ul>
+  </div>
+</nav>
+        <table class="rwd-table" style="margin-top: 10%;margin-left: auto;">
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+                <th>Level</th>
+            </tr>
+            <% for(var i=0;i<easy.length;i++){%>
+            <tr>
+                <td><%=easy[i].id%></td>
+                <td><a href="/details?id=<%=easy[i].id%>"><%=easy[i].description%></a></td>
+                <td>easy</td>
+            </tr>
+            <%}%>
+            <% for(var i=0;i<medium.length;i++){%>
+                <tr>
+                    <td><%=medium[i].id%></td>
+                    <td><a href="/details?id=<%=medium[i].id%>"><%=medium[i].description%></a></td>
+                    <td>medium</td>
+                </tr>
+                <%}%>
+                <% for(var i=0;i<hard.length;i++){%>
+                    <tr>
+                        <td><%=hard[i].id%></td>
+                        <td><a href="/details?id=<%=hard[i].id%>"><%=hard[i].description%></a></td>
+                        <td>hard</td>
+                    </tr>
+                    <%}%>
+        </table>

@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/css/question.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<nav id="navbar" class="">
+  <div class="nav-wrapper">
+    <!-- Navbar Logo -->
+    <div class="logo">
+      <!-- Logo Placeholder for Inlustration -->
+      <a href="/"><i class="fa fa-angellist"></i> Quola</a>
+    </div>
+
+    <!-- Navbar Links -->
+    <ul id="menu">
+      <li><a href="/question">Questions</a></li>
+      <li><a href="/add">Add Question</a></li><!--
+   --><li><a href="/">Generate Paper</a></li>
+    </ul>
+  </div>
+</nav>
+    <table class="rwd-table" style="margin-top: 4%;">
+        <tr>
+            <th><a id="previous" href="/question?skip=<%=prev_skip%>">Previous</a></th>
+            <th><a id="next" href="/question?skip=<%=next_skip%>">Next</a></th>
+        </tr>
+    </table>
+
+        <table class="rwd-table" style="margin-top: 2%;margin-left: auto;">
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+            </tr>
+            <% for(var i=0;i<matches.length;i++){%>
+            <tr>
+                <td><%=matches[i].id%></td>
+                <td><a href="/details?id=<%=matches[i].id%>"><%=matches[i].description%></a></td>
+            </tr>
+            <%}%>
+        </table>
